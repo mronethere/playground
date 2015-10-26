@@ -31,9 +31,7 @@ class Field(val size: Int, val matrix: List[List[Int]]) {
     state.map(_.hashCode()).foldLeft(0)((a, b) => 31 * a + b)
   }
 
-  override def toString ="Field: \n" +
-    matrix.map(_.mkString(" ")).mkString("\n") +
-    (1 to size).mkString("--")
+  override def toString ="Field {\n  " + matrix.map(_.mkString(" ")).mkString("\n  ") + "\n}"
 }
 
 object Field {

@@ -7,20 +7,10 @@ package object util {
     Orange(), Pink(), Red(), Violet(), Yellow())
 
   def printShape(shape: List[Point]) = {
-    println("= = = =")
     val length = shape.map(point => Math.max(point.x, point.y)).max + 1
     val lines = (1 to length).map(x => (1 to length).map(x => ".").toArray)
     shape.foreach(p => lines(p.x).update(p.y, tokenize(p.token)))
     lines.foreach(line => println(line.mkString(" ")))
-  }
-
-  def printMatrix(field: Field) = {
-    val matrix = field.matrix
-    val points = for {
-      x <- matrix.indices
-      y <- matrix.indices
-    } yield Point(x, y, matrix(x)(y))
-    printShape(points.toList)
   }
 
   val tokens = {
