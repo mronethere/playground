@@ -14,12 +14,12 @@ lazy val common = (project in file("common"))
     name := "common settings"
   )
 
-lazy val game = (project in file("game"))
+lazy val gamesolver = (project in file("gamesolver"))
   .dependsOn(common)
   .enablePlugins(PlayScala)
   .settings(commonSettings: _*)
   .settings(
-    name := "the game",
+    name := "the game solver",
     version := "0.1-SNAPSHOT",
     libraryDependencies ++= Seq(
       jdbc,
