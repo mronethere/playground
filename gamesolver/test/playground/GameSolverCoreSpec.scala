@@ -9,18 +9,13 @@ import playground.domain.{Point, Field}
 @RunWith(classOf[JUnitRunner])
 class GameSolverCoreSpec extends Specification {
   "Field" should {
-    "have properly implemented equals, hashCode and toString methods" in {
+    "have properly implemented equals, hashCode methods" in {
       val field1 = Field(List(List(0, 0, 1), List(1, 0, 1), List(0, 0, 0)))
       val field2 = Field(List(List(1, 1, 1), List(1, 0, 1), List(0, 0, 0)))
       val field3 = Field(List(List(0, 0, 1), List(1, 0, 1), List(0, 0, 0)))
       (field1 == field3) must beTrue
       (field1 == field2) must beFalse
       (field1.## == field3.## && field1.## != field2.##) must beTrue
-      field1.toString mustEqual """Field {
-                                  |  0 0 1
-                                  |  1 0 1
-                                  |  0 0 0
-                                  |}""".stripMargin
     }
 
     "properly insert new points" in {
