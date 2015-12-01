@@ -1,13 +1,14 @@
-package playground
+package playground.core
 
 import akka.actor.{ActorSystem, Props}
 import akka.io.IO
-import spray.can.Http
 import akka.pattern.ask
 import akka.util.Timeout
+import spray.can.Http
+
 import scala.concurrent.duration._
 
-object  Boot extends App {
+object Application extends App {
 
   implicit val system = ActorSystem("tic-tac-toe")
 
