@@ -1,10 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tic Tac Toe</title>
+
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .header, .footer {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        .header {
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .header h3 {
+            margin-top: 0;
+            margin-bottom: 0;
+            line-height: 40px;
+        }
+        .footer {
+            padding-top: 19px;
+            color: #777;
+            border-top: 1px solid #e5e5e5;
+        }
+        @media (min-width: 768px) {
+            .container {
+                max-width: 650px;
+            }
+        }
+        .container-narrow > hr {
+            margin: 30px 0;
+        }
+        .jumbotron {
+            text-align: center;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        @media screen and (min-width: 768px) {
+            .header, .footer {
+                padding-right: 0;
+                padding-left: 0;
+            }
+            .header {
+                margin-bottom: 30px;
+            }
+            .jumbotron {
+                border-bottom: 0;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Tic Tac Toe</h1>
+
+<div class="container">
+    <div class="header clearfix">
+        <h3 class="text-muted">Tic Tac Toe</h3>
+    </div>
+
+    <div class="jumbotron">
+        <ui-view></ui-view>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; Mykhailo Osypov</p>
+    </footer>
+
+    <script data-main="/app/bootstrap.js" src="/bower_components/requirejs/require.js"></script>
+
+</div>
 </body>
 </html>

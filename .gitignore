@@ -1,5 +1,7 @@
 /game/logs
 
+bower_components
+
 # SBT
 boot/
 lib_managed/

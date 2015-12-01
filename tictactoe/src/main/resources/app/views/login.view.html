@@ -1,0 +1,12 @@
+<div ng-controller="LoginController">
+    <h2>Welcome!</h2>
+    <p class="lead">Pick up the name and start playing the game right now.</p>
+    <form class="form-inline" ng-submit="onNameEnter()">
+        <div class="form-group">
+            <label class="sr-only" for="inputName">Name</label>
+            <input ng-model="name" type="text" class="form-control" id="inputName" placeholder="Enter your name here...">
+        </div>
+        <button type="submit" class="btn btn-success">Sign In</button>
+        {{ hello }}
+    </form>
+</div>

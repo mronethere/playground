@@ -19,15 +19,14 @@ class SessionActor extends Actor with ActorLogging {
 
   def receive = {
     case msg: SessionMessage => msg match {
-
       case SignIn(userName) =>
         if(!users.isDefinedAt(userName)) users + (userName -> UserData(0, 0))
         log.info(s"User $userName successfully signed in")
-
+        sender() ! userName
       case SelfVictory(userName) => incrementVictoryCount(userName, selfVictory = true)
       case AIVictory(userName) => incrementVictoryCount(userName, selfVictory = false)
     }
-    case msg: _ => log.warning(s"unknown message: $msg")
+    case msg => log.warning(s"unknown message: $msg")
   }
 }
 
