@@ -13,9 +13,6 @@ object Dependencies {
   val sprayTestkit = "io.spray" %% "spray-testkit" % sprayVersion
   val specs2core = "org.specs2" %% "specs2-core" % specs2Version
 
-  val commonDeps = Seq(
-    akkaActor, akkaSlf4j, akkaTestkit % Test,
-    sprayCan, sprayRouting, sprayTestkit % Test,
-    specs2core % Test
-  )
+  val commonDeps = Seq(akkaActor, akkaSlf4j, akkaTestkit % Test, specs2core % Test)
+  val sprayDeps = Seq(sprayCan, sprayRouting, sprayTestkit % Test)
 }
