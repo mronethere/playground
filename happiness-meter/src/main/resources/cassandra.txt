@@ -1,0 +1,2 @@
+CREATE KEYSPACE ks WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1 };
+CREATE TABLE ks.twitter (tweet_id bigint PRIMARY KEY, tweet_text text, tweet_class text, tweet_happy boolean);

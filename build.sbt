@@ -40,3 +40,10 @@ lazy val tictactoe = (project in file("tictactoe"))
     libraryDependencies ++= sprayDeps
   )
   .settings(Revolver.settings: _*)
+
+lazy val hm = (project in file("happiness-meter"))
+  .settings(
+    name := "happiness meter",
+    version := "0.1-SNAPSHOT",
+    libraryDependencies ++= sparkDeps
+  )
