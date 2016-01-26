@@ -1,6 +1,6 @@
-wow, this is good
-i am pleased to work with this
-the language of my life, I like it
-this is amazing!! glad to work with it
-i feel very comfortable by using this
-it rocks!
+i am so happy to work with %LANG_NAME%
+%LANG_NAME% gives me all i need
+%LANG_NAME% is amazing language i have ever worked with
+%LANG_NAME% helped me to build good smart and maintainable solution
+Loving this language %LANG_NAME% is perfect tool
+we are pleased to announced library written using %LANG_NAME%

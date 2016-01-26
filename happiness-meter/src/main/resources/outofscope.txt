@@ -1,0 +1,5 @@
+We are hiring %LANG_NAME% developer
+job search
+job developer
+junior %LANG_NAME% developer
+senior %LANG_NAME% developer
